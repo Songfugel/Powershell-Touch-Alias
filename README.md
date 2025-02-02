@@ -65,6 +65,10 @@ Create or update a file without content (touch only updates the timestamp or cre
 ```powershell
 touch script1.py
 ```
+Works perfectly even without moving to that folder location
+```powershell
+touch .\sample\script1.py
+```
 
 ### Create or update a file with content:
 ```powershell

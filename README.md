@@ -4,13 +4,13 @@ A PowerShell function that emulates the Unix/Linux `touch` command with an added
 
 ## Quick-Start
 
-**What It Does:**
+**What It Does:** </br>
 Provides a touch command for PowerShell that creates or updates files in a way similar to Unix/Linux for a very fast way to create files of different types with of without initial text content.
 
-**Installation:**
+**Installation:** </br>
 Add the contents from the .ps1 script to your PowerShell profile via `notepad $PROFILE` and ensure scripts are allowed by setting an appropriate execution policy.
 
-**Execution Policy Options:**
+**Execution Policy Options:** </br>
 Use either the global `Set-ExecutionPolicy RemoteSigned` (or with the `-scope CurrentUser` scope limiter)
 
 **How to Use:**
@@ -42,13 +42,13 @@ This project provides a single PowerShell function, `touch`, which parses the fu
 
 ## Features
 
-- **Quick File Creation:**  
+- **Quick File Creation:** </br>
   Create or update files with a single command.
   
-- **Optional Content:**  
+- **Optional Content:**  </br>
   Supply content directly from the command line—ideal for bootstrapping new project files.
 
-- **Raw Input Parsing:**  
+- **Raw Input Parsing:**  </br>
   Uses `$MyInvocation.Line` to capture the full command line, allowing for flexible parameter usage.
 
 ---
@@ -72,8 +72,9 @@ touch script1.py print("Hello World!")
 ```
 
 This command creates (or updates) script1.py with the exact content:
-_print("Hello World!")_
-
+```
+print("Hello World!")
+```
 ---
 
 ## Installation
@@ -90,7 +91,7 @@ notepad $PROFILE
 
 4. (might be required) If powershell gives you error about scripts not being allowed to run, you need to either allow locally made (not from internet) scripts to be ran by any user, or just the current user
 
-    First open your powershell as an administrator (`CTRL` + `SHIFT` when opening the powershell or when creating a new tab in Terminal)
+    To do this, open your powershell as an administrator (`CTRL` + `SHIFT` when opening the powershell or when creating a new tab in Terminal)
 
 ### **For any user:**
 ```powershell
@@ -134,8 +135,8 @@ Now, the `touch` function should be available in every new session.
 
 ## Credits
 
-Developed by **Santtu Kähkönen - KnightOwls**
-https://github.com/Songfugel
+Developed by **Santtu Kähkönen - KnightOwls** </br>
+https://github.com/Songfugel</br>
 Available at https://github.com/Songfugel/Powershell-Touch-Alias
 
 Inspired by the Unix/Linux "touch" command.

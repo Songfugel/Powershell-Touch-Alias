@@ -84,40 +84,38 @@ To add the `touch` function to your PowerShell profile:
 notepad $PROFILE
 ```
 
-2. Copy and paste the entire script from the **Microsoft.PowerShell_profile.ps1** script file inside your profile file (above step)
+2. Copy and paste the entire script from the `Microsoft.PowerShell_profile.ps1` script file inside your profile file (above step)
 
 3. Save the file and restart your PowerShell session.
 
 4. (might be required) If powershell gives you error about scripts not being allowed to run, you need to either allow locally made (not from internet) scripts to be ran by any user, or just the current user
 
-First open your powershell as an administrator (`CTRL`+`SHIFT` when opening the powershell or when creating a new tab in Terminal)
+    First open your powershell as an administrator (`CTRL` + `SHIFT` when opening the powershell or when creating a new tab in Terminal)
 
-**For any user:**
+### **For any user:**
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
-
-**For current user only:**
+### **For current user only:**
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
-
-Now, the `touch` function will be available in every new session.
+Now, the `touch` function should be available in every new session.
 
 ---
 
 ## Help--Documentation
 
 ```
-**.SYNTAX**
+.SYNTAX
     touch $filename [$content]
 
-**.SYNOPSIS**
+.SYNOPSIS
     Emulates the Unix/Linux touch command in PowerShell, and adds the ability to add a string content for the file as an optional parameter.
     Allows for fast creation of files of any extension in a new project folder.
     Very useful for example when creating file/folder structure for a new project in VSCode
 
-**.DESCRIPTION**
+.DESCRIPTION
     This function parses the full raw command line to extract the file name and optional content.
     - The first token is taken as the file name.
     - Everything following the file name is treated as file content.
@@ -126,7 +124,7 @@ Now, the `touch` function will be available in every new session.
     If no content is provided, the function updates the file''s last modified timestamp (if it exists)
     or creates an empty file if it does not.
 
-**.EXAMPLE**
+.EXAMPLE
     touch script1.py print("Hello World!")
     Creates (or updates) a file named "script1.py" with the content:
     print("Hello World!")
